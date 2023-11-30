@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.10)
+project(DinLib)
+set (CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
+add_library(DinamicLibrary SHARED leaver.h leaver.cpp)
+add_executable(DinamicLibraryCmake DinLibUser.cpp)
+target_link_libraries(DinamicLibraryCmake DinamicLibrary)
